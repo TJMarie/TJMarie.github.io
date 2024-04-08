@@ -1,0 +1,26 @@
+#title {
+    border: 5px black double;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+#links {
+    background-color: bisque;
+    padding: 20px;
+}
+#links img {
+    display: none;
+    height: 25px;
+    width: 25px;
+}
+#gallery {
+    background: url(images/sunset.JPG)no-repeat;
+    background-size: cover;
+    border: 5px black double;
+}
+#gallery img {
+    height: 200px;
+}
