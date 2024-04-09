@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio - Adrien Kim Jones</title>
+        <link rel="stylesheet" href="portfolio.css">
+    </head>
+    <body>
+        <div id="title">
+            <h1>Adrien Kim Jones</h1>
+            <h2>Music and Visual Art</h2>
+        </div>
+        <div id="links">
+            <a href="https://www.youtube.com/watch?v=_WMEDJMG71k" target="_blank">
+                <img src="images/youtube-icon.svg">
+            </a>
+            <a href="https://www.instagram.com/miraenjones/">
+                <img src="images/instagram-icon.svg">
+            </a>
+            <a href="https://www.linkedin.com/in/tara-jones-3a7601263/">
+                <img src="images/linkedin-icon.svg">
+            </a>
+        </div>
+        <section id="gallery">
+            <img class="gallery" style="display: none;" src="images/i-paranoia.png">
+            <img class="gallery" style="display: none;" src="images/anxiety.jpg">
+            <img class="gallery" style="display: none;" src="images/bloom.jpg">
+            <img class="gallery" style="display: none;" src="images/dancer-1.jpg">
+            <img class="gallery" style="display: none;" src="images/dancer-2.jpg">
+            <img class="gallery" style="display: none;" src="images/galaxy.jpg">
+            <img class="gallery" style="display: none;" src="images/mothers-milk.jpg">
+            <img class="gallery" style="display: none;" src="images/obsessive-thoughts.jpg">
+            <img class="gallery" style="display: none;" src="images/self-portrait.jpg">
+            <img class="gallery" style="display: none;" src="images/voyager.jpg">
+            <img class="gallery" style="display: none;" src="images/screaming-skull.jpg">
+            <img class="gallery" style="display: none;" src="images/wavelength.jpg">
+            <img class="gallery" style="display: none;" src="images/weakhearts.jpg">
+            <img class="gallery" style="display: none;" src="images/bystanders.jpg">
+            <img class="gallery" style="display: none;" src="images/ram-skull.jpg">
+            <img class="gallery" style="display: none;" src="images/hieroglyph.jpg">
+            <img class="gallery" style="display: none;" src="images/canoe.jpg">
+            <img class="gallery" style="display: none;" src="images/desert.jpg">
+            <img class="gallery" style="display: none;" src="images/burning-bush.jpg">
+        </section>
+
+        <section id="filter-paintings">
+            <h2>Filter Paintings</h2>
+            <form onsubmit="return false;">
+                <input type="checkbox" id="item" name="art" value="item" onchange="filterPaintings('item')">
+                <label for="item">All</label>
+                
+                <input type="checkbox" id="abstract" name="art" value="abstract" onchange="filterPaintings('abstract')">
+                <label for="abstract">Abstract</label>
+                
+                <input type="checkbox" id="landscape" name="art" value="landscape" onchange="filterPaintings('landscape')">
+                <label for="landscape">Landscapes</label>
+                
+                <input type="checkbox" id="people" name="art" value="people" onchange="filterPaintings('people')">
+                <label for="people">People</label>
+                
+                <input type="checkbox" id="skull" name="art" value="skull" onchange="filterPaintings('skull')">
+                <label for="skull">Skulls</label>
+                
+                <input type="checkbox" id="cover" name="art" value="cover" onchange="filterPaintings('cover')">
+                <label for="cover">Album Art</label>
+                
+            </form>
+        </section>
+        
+        <section id="filter">
+            <div class="item skull cover people">
+                <img src="images/i-paranoia.png">
+                <p><i>I, Paranoia</i><br>Not For Sale</p>
+            </div>
+            <div class="item abstract">
+                <img src="images/anxiety.jpg">
+                <p><i>Anxiety</i></p>
+            </div>
+            <div class="item abstract">
+                <img src="images/bloom.jpg">
+                <p><i>Bloom</i></p>
+            </div>
+            <div class="item abstract people">
+                <img src="images/dancer-1.jpg">
+                <p><i>Dancer 1</i><br>SOLD</p>
+            </div>
+            <div class="item abstract people">
+                <img src="images/dancer-2.jpg">
+                <p><i>Dancer 2</i><br>SOLD</p>
+            </div>
+            <div class="item abstract">
+                <img src="images/galaxy.jpg">
+                <p><i>Galaxy</i></p>
+            </div>
+            <div class="item abstract people">
+                <img src="images/mothers-milk.jpg">
+                <p><i>Mother's Milk</i><br>SOLD</p>
+            </div>
+            <div class="item abstract">
+                <img src="images/obsessive-thoughts.jpg">
+                <p><i>Obsession</i></p>
+            </div>
+            <div class="item people">
+                <img src="images/self-portrait.jpg">
+                <p><i>Self Portrait</i></p>
+            </div>
+            <div class="item landscape">
+                <img src="images/voyager.jpg">
+                <p><i>Voyager</i></p>
+            </div>
+            <div class="item skull people">
+                <img src="images/screaming-skull.jpg">
+                <p><i>Agony</i><br>SOLD</p>
+            </div>
+            <div class="item abstract">
+                <img src="images/wavelength.jpg">
+                <p><i>Wavelength</i></p>
+            </div>
+            <div class="item cover people">
+                <img src="images/weakhearts.jpg">
+                <p>Weakhearts album cover<br>Not For Sale</p>
+            </div>
+            <div class="item landscape">
+                <img src="images/bystanders.jpg">
+                <p><i>Bystanders</i><br>SOLD</p>
+            </div>
+            <div class="item skull">
+                <img src="images/ram-skull.jpg">
+                <p><i>The Ram</i><br>SOLD</p>
+            </div>
+            <div class="item abstract">
+                <img src="images/hieroglyph.jpg">
+                <p><i>Hieroglyph</i><br>SOLD</p>
+            </div>
+            <div class="item landscape">
+                <img src="images/canoe.jpg">
+                <p><i>Stillness</i><br>SOLD</p>
+            </div>
+            <div class="item landscape">
+                <img src="images/desert.jpg">
+                <p><i>Desert Scape</i><br>SOLD</p>
+            </div>
+            <div class="item abstract">
+                <img src="images/burning-bush.jpg">
+                <p><i>Burning Bush</i><br>SOLD</p>
+            </div>
+
+        </section>
+
+        <section id="music">
+            <h2>Sad Songs</h2>
+            <audio controls>
+                <source src="audio/Pecuniary-maniac.m4a">
+                Your browser does not support audio.
+            </audio>
+
+            <div class="songs" id="beadle">
+                <h3>Beadle</h3>
+                <p>lyrics</p>
+            </div>
+
+            <div class="songs" id="china-girl">
+                <h3>China Girl</h3>
+                <p>lyrics</p>
+            </div>
+
+            <div class="songs" id="error">
+                <h3>Error: Page Not Found</h3>
+                <p>lyrics</p>
+            </div>
+
+            <div class="songs" id="fallout">
+                <h3>Fallout</h3>
+                <p>lyrics</p>
+            </div>
+
+            <div class="songs" id="fffffff">
+                <h3>FFFFFFF</h3>
+                <p>lyrics</p>
+            </div>
+
+            <div class="songs" id="idk">
+                <h3>I Don't Know Anything</h3>
+                <p>lyrics</p>
+            </div>
+
+            <div class="songs" id="romantic">
+                <h3>I'm Not Romantic</h3>
+                <p>lyrics</p>
+            </div>
+
+            <div class="songs" id="maniac">
+                <h3>Pecuniary Maniac</h3>
+                <p>lyrics</p>
+            </div>
+        </section>
+
+        <footer>&copy;2024 Adrien Kim</footer>
+        <script src="portfolio.js"></script>
+    </body>
+</html>

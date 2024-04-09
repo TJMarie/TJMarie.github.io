@@ -1,26 +1,81 @@
 #title {
+    background-color: floralwhite;
     border: 5px black double;
 }
 h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', sans-serif;
+    font-size:xx-large;
     text-align: center;
 }
 h2 {
+    display: block;
+    font-family:'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+    font-size:large;
     text-align: center;
+    margin: 10px 30px 10px 30px;
 }
 #links {
-    background-color: bisque;
-    padding: 20px;
+    align-items: center;
+    background-color:rgb(216, 202, 168);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
 }
 #links img {
-    display: none;
     height: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
     width: 25px;
 }
 #gallery {
+    align-items: center;
     background: url(images/sunset.JPG)no-repeat;
     background-size: cover;
     border: 5px black double;
+    display: flex;
+    height: 250px;
+    justify-content: center;
 }
 #gallery img {
     height: 200px;
+    width: auto;
+}
+#filter-paintings {
+    align-items: center;
+    background-color: rgb(216, 202, 168);
+    align-items: center;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px 50px 10px 50px;
+}
+label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+#filter {
+    background-color:floralwhite;
+    border: 5px black double;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    padding: 20px 20px 40px 20px;
+    row-gap: 50px;
+}
+#filter div {
+    align-self: center;
+    display: none;
+    height: 130px;
+    justify-self: center;
+    margin: 10px;
+    width: auto;
+}
+#filter div img {
+    height: 100px;
+    width: auto;
+}
+.hide {
+    display: none;
 }
