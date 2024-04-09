@@ -101,26 +101,33 @@ function filterPaintings(c) {
     }
 }
 
-function toggleVisibility(elements) {
-    elements.forEach(el => {
-        visible = el.checkVisibility()
-        if (visible) {
-            el.style.display = 'none'
-        } else {
-            el.style.display = "inline-grid"
-        }
-        
-    });
-
-}
 function hideVisibility(elements) {
     elements.forEach(el => {
-        el.style.display = 'none'
+        el.style.display = "none"
     })
 }
 
 function showVisibility(elements) {
     elements.forEach(el => {
-        el.style.display = 'inline-grid'
+        el.style.display = "inline-grid"
     })
+}
+
+const lyrics = Array.from(document.getElementsByClassName("lyrics"))
+const audio = document.getElementById("audio")
+const source = document.getElementById("source")
+
+function changeAudio(song) {
+    lyrics.forEach( lyric => {
+        lyric.style.display = "none"
+    })
+    const ly = document.getElementById(song)
+    if (ly) {
+        ly.style.display = "inline-block"
+    }
+
+    source.src = "audio/" + song + ".m4a"
+    console.log(player.src)
+    audio.load()
+    audio.play()
 }

@@ -11,7 +11,7 @@
             <h1>Adrien Kim Jones</h1>
             <h2>Music and Visual Art</h2>
         </div>
-        <div id="links">
+        <div class="banner" id="links">
             <a href="https://www.youtube.com/watch?v=_WMEDJMG71k" target="_blank">
                 <img src="images/youtube-icon.svg">
             </a>
@@ -44,7 +44,7 @@
             <img class="gallery" style="display: none;" src="images/burning-bush.jpg">
         </section>
 
-        <section id="filter-paintings">
+        <section class="banner" id="filter-paintings">
             <h2>Filter Paintings</h2>
             <form onsubmit="return false;">
                 <input type="checkbox" id="item" name="art" value="item" onchange="filterPaintings('item')">
@@ -148,51 +148,150 @@
 
         </section>
 
-        <section id="music">
+        <section class="banner" id="player">
             <h2>Sad Songs</h2>
-            <audio controls>
-                <source src="audio/Pecuniary-maniac.m4a">
+            <audio controls id="audio">
+                <source id="source" src="audio/pecuniary-maniac.m4a">
                 Your browser does not support audio.
             </audio>
+        </section>
 
-            <div class="songs" id="beadle">
+        <section id="songs">
+            <div class="song" onclick="changeAudio('beadle')">
                 <h3>Beadle</h3>
-                <p>lyrics</p>
+                <p class="date">2016</p>
             </div>
 
-            <div class="songs" id="china-girl">
+            <div class="song" onclick="changeAudio('china-girl')">
                 <h3>China Girl</h3>
-                <p>lyrics</p>
+                <p class="date">2016</p>
+                <p class="lyrics" id="china-girl">
+                    Look at the china girls, pretty and thin
+                    <br>All my life I thought, "why can't you be like them?"
+                    <br>Dainty collarbones and piano string fingers
+                    <br>Pick at the leftovers on a plate of bird food
+                    <br>Catalogues of bone legs dance in my dreams, they taunt me
+                    <br>If I could be happy, all I'd need
+                    <br>Is a gaunt me
+                    <br><br>I followed every step, I think it worked
+                    <br>If I could step down a little more of this spiral
+                    <br>My ribs are bruising my sides, I can't stop now 
+                    <br>I'm like a corset with the strings pulled too tight 
+                    <br>(I'll be happy now)x4
+                    <br><br>I am a China girl, pretty and thin
+                    <br>All my life I've thought, "why can't I be like them?"
+                    <br>Ugly collarbones that stick out like sore thumbs
+                    <br>Twiddle and fiddle with the silver fork on my dinner plate
+                </p>
             </div>
 
-            <div class="songs" id="error">
+            <div class="song" onclick="changeAudio('error')">
                 <h3>Error: Page Not Found</h3>
-                <p>lyrics</p>
+                <p class="date">2016</p>
             </div>
 
-            <div class="songs" id="fallout">
+            <div class="song" onclick="changeAudio('fallout')">
                 <h3>Fallout</h3>
-                <p>lyrics</p>
+                <p class="date">2014</p>
             </div>
 
-            <div class="songs" id="fffffff">
+            <div class="song" onclick="changeAudio('FFFFFFF')">
                 <h3>FFFFFFF</h3>
-                <p>lyrics</p>
+                <p class="date">2015</p>
             </div>
 
-            <div class="songs" id="idk">
+            <div class="song" onclick="changeAudio('i-dont-know-anything')">
                 <h3>I Don't Know Anything</h3>
-                <p>lyrics</p>
+                <p class="date">2016</p>
             </div>
 
-            <div class="songs" id="romantic">
+            <div class="song" onclick="changeAudio('im-not-romantic')">
                 <h3>I'm Not Romantic</h3>
-                <p>lyrics</p>
+                <p class="date">2016</p>
+                <p class="lyrics" id="romantic">
+                    Feels like a wildfire in my head
+                    <br>I can't believe my eyes
+                    <br>They're playing tricks on me
+                    <br>Cause I've been trying to forget
+                    <br>Seconds pass me by, they crawl along
+                    <br>Just to spite me
+                    <br>I can feel you near, is anybody here?
+                    <br>Come out, I'm locked and loaded
+                    <br><br>Slipping through the cracks in my medicine
+                    <br>Seeing shadows flit cross my window
+                    <br>Harsh whispers make me wanna take flight
+                    <br>Are you listening now?
+                    <br>I'm not romantic, I'm just
+                    <br>Hopeless, useless, waste of space
+                    <br>Nothing worth a damn
+                    <br>I'd be lucky for a handful of peace
+                    <br>So I'll bum a fag, take a drag
+                    <br>For my jetlagged mind
+                    <br>It used to be so clear
+                    <br>But now I'm fighting the fear
+                </p>
             </div>
 
-            <div class="songs" id="maniac">
+            <div class="song" onclick="changeAudio('pecuniary-maniac')">
                 <h3>Pecuniary Maniac</h3>
-                <p>lyrics</p>
+                <p class="date">2016</p>
+                <p class="lyrics" id="maniac">
+                    Showered in gold dust
+                    <br>The price of a lover
+                    <br>Fervent and urgent
+                    <br>What do I want?
+                    <br>The wealth of a kiss
+                    <br>My neck caressed by silver tresses
+                    <br>Dresses of lugubriousness
+                    <br>I'm in the abyss of
+                    <br>Is this more than business?
+                    <br>Scratching at my windows
+                    <br>Bags under my eyes
+                    <br>Two more credit cards
+                    <br>I feel so alive
+                    <br>Pecuniary maniac
+                    <br>Undoubtable manic
+                    <br>Posessing the ability to tantalize
+                    <br>But don't panic
+                    <br>It's not a phase, it's biology, tautology
+                    <br>To say I never had a feeling for a person
+                    <br>In my life
+                    <br><br>She sits on the bed
+                    <br>With a velvet complexion
+                    <br>Complex emotions
+                    <br>Begging the question
+                    <br>What does she want?
+                </p>
+            </div>
+
+            <div class="song" onclick="changeAudio('change-of-pace')">
+                <h3>A Little Change of Pace</h3>
+                <p class="date">2016</p>
+            </div>
+
+            <div class="song" onclick="changeAudio('cottagecore')">
+                <h3>Cottagecore</h3>
+                <p class="date">2017</p>
+            </div>
+
+            <div class="song" onclick="changeAudio('mercury')">
+                <h3>Mercury</h3>
+                <p class="date">2015</p>
+            </div>
+
+            <div class="song" onclick="changeAudio('odelay')">
+                <h3>Odelay</h3>
+                <p class="date">2016</p>
+            </div>
+
+            <div class="song" onclick="changeAudio('serenity')">
+                <h3>Serenity</h3>
+                <p class="date">2014</p>
+            </div>
+
+            <div class="song" onclick="changeAudio('storm')">
+                <h3>Storm</h3>
+                <p class="date">2014</p>
             </div>
         </section>
 
