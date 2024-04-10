@@ -123,7 +123,7 @@ function changeAudio(song) {
     })
     const ly = document.getElementById(song)
     if (ly) {
-        ly.style.display = "inline-block"
+        ly.style.display = "block"
     }
 
     source.src = "audio/" + song + ".m4a"

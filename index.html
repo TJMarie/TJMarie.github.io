@@ -15,14 +15,15 @@
             <a href="https://www.youtube.com/watch?v=_WMEDJMG71k" target="_blank">
                 <img src="images/youtube-icon.svg">
             </a>
-            <a href="https://www.instagram.com/miraenjones/">
+            <a href="https://www.instagram.com/miraenjones/" target="_blank">
                 <img src="images/instagram-icon.svg">
             </a>
-            <a href="https://www.linkedin.com/in/tara-jones-3a7601263/">
+            <a href="https://www.linkedin.com/in/tara-jones-3a7601263/" target="_blank">
                 <img src="images/linkedin-icon.svg">
             </a>
         </div>
         <section id="gallery">
+            <img class="gallery" style="display: none;" src="images/miran.png">
             <img class="gallery" style="display: none;" src="images/i-paranoia.png">
             <img class="gallery" style="display: none;" src="images/anxiety.jpg">
             <img class="gallery" style="display: none;" src="images/bloom.jpg">
@@ -44,31 +45,47 @@
             <img class="gallery" style="display: none;" src="images/burning-bush.jpg">
         </section>
 
-        <section class="banner" id="filter-paintings">
+        <section class="banner" id="filter">
             <h2>Filter Paintings</h2>
             <form onsubmit="return false;">
-                <input type="checkbox" id="item" name="art" value="item" onchange="filterPaintings('item')">
-                <label for="item">All</label>
+                <div class="filters">
+                    <input type="checkbox" id="item" name="art" value="item" onchange="filterPaintings('item')">
+                    <label for="item">All</label>
+                </div>
                 
-                <input type="checkbox" id="abstract" name="art" value="abstract" onchange="filterPaintings('abstract')">
-                <label for="abstract">Abstract</label>
+                <div class="filters">
+                    <input type="checkbox" id="abstract" name="art" value="abstract" onchange="filterPaintings('abstract')">
+                    <label for="abstract">Abstract</label>
+                </div>
                 
-                <input type="checkbox" id="landscape" name="art" value="landscape" onchange="filterPaintings('landscape')">
-                <label for="landscape">Landscapes</label>
+                <div class="filters">
+                    <input type="checkbox" id="landscape" name="art" value="landscape" onchange="filterPaintings('landscape')">
+                    <label for="landscape">Landscapes</label>
+                </div>
                 
-                <input type="checkbox" id="people" name="art" value="people" onchange="filterPaintings('people')">
-                <label for="people">People</label>
+                <div class="filters">
+                    <input type="checkbox" id="people" name="art" value="people" onchange="filterPaintings('people')">
+                    <label for="people">People</label>
+                </div>
                 
-                <input type="checkbox" id="skull" name="art" value="skull" onchange="filterPaintings('skull')">
-                <label for="skull">Skulls</label>
+                <div class="filters">
+                    <input type="checkbox" id="skull" name="art" value="skull" onchange="filterPaintings('skull')">
+                    <label for="skull">Skulls</label>
+                </div>
                 
-                <input type="checkbox" id="cover" name="art" value="cover" onchange="filterPaintings('cover')">
-                <label for="cover">Album Art</label>
+                <div class="filters">
+                    <input type="checkbox" id="cover" name="art" value="cover" onchange="filterPaintings('cover')">
+                    <label for="cover">Album Art</label>
+                </div>
                 
             </form>
         </section>
         
-        <section id="filter">
+        <section id="filter-paintings">
+            <div class="item cover">
+                <img src="images/miran.png">
+                <p><i>Miraen</i><br>Not For Sale</p>
+            </div>
             <div class="item skull cover people">
                 <img src="images/i-paranoia.png">
                 <p><i>I, Paranoia</i><br>Not For Sale</p>
@@ -149,7 +166,7 @@
         </section>
 
         <section class="banner" id="player">
-            <h2>Sad Songs</h2>
+            <h2>Original Music</h2>
             <audio controls id="audio">
                 <source id="source" src="audio/pecuniary-maniac.m4a">
                 Your browser does not support audio.
@@ -158,13 +175,11 @@
 
         <section id="songs">
             <div class="song" onclick="changeAudio('beadle')">
-                <h3>Beadle</h3>
-                <p class="date">2016</p>
+                <h3>Beadle - 2016</h3>
             </div>
 
             <div class="song" onclick="changeAudio('china-girl')">
-                <h3>China Girl</h3>
-                <p class="date">2016</p>
+                <h3>China Girl - 2016</h3>
                 <p class="lyrics" id="china-girl">
                     Look at the china girls, pretty and thin
                     <br>All my life I thought, "why can't you be like them?"
@@ -186,29 +201,24 @@
             </div>
 
             <div class="song" onclick="changeAudio('error')">
-                <h3>Error: Page Not Found</h3>
-                <p class="date">2016</p>
+                <h3>Error: Page Not Found - 2016</h3>
             </div>
 
             <div class="song" onclick="changeAudio('fallout')">
-                <h3>Fallout</h3>
-                <p class="date">2014</p>
+                <h3>Fallout - 2014</h3>
             </div>
 
             <div class="song" onclick="changeAudio('FFFFFFF')">
-                <h3>FFFFFFF</h3>
-                <p class="date">2015</p>
+                <h3>Lounge Interlude - 2015</h3>
             </div>
 
             <div class="song" onclick="changeAudio('i-dont-know-anything')">
-                <h3>I Don't Know Anything</h3>
-                <p class="date">2016</p>
+                <h3>I Don't Know Anything - 2016</h3>
             </div>
 
             <div class="song" onclick="changeAudio('im-not-romantic')">
-                <h3>I'm Not Romantic</h3>
-                <p class="date">2016</p>
-                <p class="lyrics" id="romantic">
+                <h3>I'm Not Romantic - 2016</h3>
+                <p class="lyrics" id="im-not-romantic">
                     Feels like a wildfire in my head
                     <br>I can't believe my eyes
                     <br>They're playing tricks on me
@@ -233,9 +243,8 @@
             </div>
 
             <div class="song" onclick="changeAudio('pecuniary-maniac')">
-                <h3>Pecuniary Maniac</h3>
-                <p class="date">2016</p>
-                <p class="lyrics" id="maniac">
+                <h3>Pecuniary Maniac - 2016</h3>
+                <p class="lyrics" id="pecuniary-maniac">
                     Showered in gold dust
                     <br>The price of a lover
                     <br>Fervent and urgent
@@ -265,33 +274,27 @@
             </div>
 
             <div class="song" onclick="changeAudio('change-of-pace')">
-                <h3>A Little Change of Pace</h3>
-                <p class="date">2016</p>
+                <h3>A Little Change of Pace - 2016</h3>
             </div>
 
             <div class="song" onclick="changeAudio('cottagecore')">
-                <h3>Cottagecore</h3>
-                <p class="date">2017</p>
+                <h3>Cottagecore - 2017</h3>
             </div>
 
             <div class="song" onclick="changeAudio('mercury')">
-                <h3>Mercury</h3>
-                <p class="date">2015</p>
+                <h3>Mercury - 2015</h3>
             </div>
 
             <div class="song" onclick="changeAudio('odelay')">
-                <h3>Odelay</h3>
-                <p class="date">2016</p>
+                <h3>Odelay - 2016</h3>
             </div>
 
             <div class="song" onclick="changeAudio('serenity')">
-                <h3>Serenity</h3>
-                <p class="date">2014</p>
+                <h3>Serenity - 2014</h3>
             </div>
 
             <div class="song" onclick="changeAudio('storm')">
-                <h3>Storm</h3>
-                <p class="date">2014</p>
+                <h3>Storm - 2014</h3>
             </div>
         </section>
 

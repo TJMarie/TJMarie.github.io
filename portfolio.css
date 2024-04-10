@@ -1,10 +1,17 @@
+body {
+    background-color: rgb(110, 128, 161);
+}
 #title {
-    background-color: floralwhite;
+    background-attachment: local;
+    background-image: url(images/bkgd.jpg);
+    background-size: cover;
     border: 5px black double;
 }
 h1 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', sans-serif;
     font-size:xx-large;
+    letter-spacing: 5px;
+    margin: 15px 0px 15px 0px;
     text-align: center;
 }
 h2 {
@@ -23,11 +30,18 @@ h2 {
     margin: 10px;
     padding: 10px;
 }
+#links {
+    background-color: lightgrey;
+}
 #links img {
     height: 25px;
     margin-left: 10%;
     margin-right: 10%;
     width: 25px;
+}
+#links a {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 #gallery {
     align-items: center;
@@ -42,21 +56,17 @@ h2 {
     height: 200px;
     width: auto;
 }
-#filter-paintings {
-    align-items: center;
-    background-color: rgb(216, 202, 168);
-    align-items: center;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    margin: 10px;
+#filter {
     padding: 10px 50px 10px 50px;
+}
+.filters {
+    display: inline-flex;
 }
 label {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: small;
 }
-#filter {
+#filter-paintings {
     background-color:floralwhite;
     border: 5px black double;
     display: grid;
@@ -64,7 +74,7 @@ label {
     padding: 20px 20px 40px 20px;
     row-gap: 50px;
 }
-#filter div {
+#filter-paintings div {
     align-self: center;
     display: none;
     height: 130px;
@@ -72,7 +82,7 @@ label {
     margin: 10px;
     width: auto;
 }
-#filter div img {
+#filter-paintings div img {
     height: 100px;
     width: auto;
 }
@@ -82,18 +92,13 @@ label {
 #player {
     background-color:rgb(157, 181, 227);
 }
-#songs {
-    align-items: center;
-    display: flexbox;
-    justify-content: center;
-}
 .song{
     background-color: rgb(217, 236, 253);
     border: 5px black double;
     display: inline-block;
-    padding: 5px 5% 5px 5%;
+    padding: 5px 5px 5px 5px;
     margin-bottom: 10px;
-    width: 38%;
+    width: 46%;
 }
 .song:hover {
     background-color:rgb(196, 210, 236);
@@ -103,15 +108,15 @@ label {
     margin-top: 10px;
     text-align: center;
 }
-.song p {
+.lyrics {
     display: none;
     font-size: xx-small;
+    margin: auto;
+    padding-bottom: 10px;
+    width: fit-content;
 }
 @media screen and (max-width: 600px) {
     #songs div {
-        width: 89%;
+        width: 95%;
     }
-}
-.date {
-    text-align: right;
 }
